@@ -12,12 +12,9 @@ offspring->binaryString.pop_back();
 }
 
 string print = offspring->getString();
-cout<<"the print prior is "<<print<<" and the cut is "<<cut<<endl;
 
 offspring->binaryString=cut+(offspring->binaryString); 
 
-print = offspring->getString();
-cout<<"the print is "<<print<<endl;
 
 
 return offspring; 

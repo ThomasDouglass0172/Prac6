@@ -9,14 +9,16 @@
 using namespace std; 
  
     Individual* execute(Individual* indPtr, Mutator * mPtr, int k){
-   indPtr=mPtr->mutate(indPtr , k);
-   cout<<"made it" <<endl;
+   indPtr=mPtr->mutate(indPtr , k); 
     return indPtr; 
 
 }
 
-int main(void){
+int main(){
 
+//string binarystr1, int k1, string binarystr2, int k2
+    
+    
     //takes in one line of input: binarystr1 k1 binarystr2 k2
 
     string binarystr1;
@@ -49,21 +51,29 @@ p2=&Ind2;
 
 //first individual is bitflip
 p1=execute(p1, m1, k1 );
-string BinStr1 = p1->getString(); 
-cout<<BinStr1<<endl;
-p1= execute(p1, m1, k1 );
-BinStr1 = p1->getString(); 
-cout<<BinStr1<<endl;
+
 //second individual is rearrange
+
 p2= execute(p2, m2, k2 );
+
+int sequenceMax1 = p1->getMaxOnes(); 
+
+int sequenceMax2 = p2->getMaxOnes(); 
+int Maxsequence; 
+if (sequenceMax1>=sequenceMax2){
+    Maxsequence=sequenceMax1; 
+}
+if(sequenceMax2>sequenceMax1){
+    Maxsequence=sequenceMax2; 
+}
+
+
+
+
+string BinStr1 = p1->getString(); 
 string BinStr2 = p2->getString(); 
-cout<<BinStr2<<endl;
-p2= execute(p2, m2, k2 );
-BinStr2 = p2->getString(); 
-cout<<BinStr2<<endl;
 
-
-cout<<BinStr1<<" "<<BinStr2<<" "<<endl;
+cout<<BinStr1<<" "<<BinStr2<<" "<<Maxsequence<<endl;
 
 // int length= Ind1.getLength(); 
 // string str = Ind1. getString(); 
@@ -86,7 +96,6 @@ cout<<BinStr1<<" "<<BinStr2<<" "<<endl;
 
 // cout<<"the length is "<<length<< " and the string is "<< str<< " and the max ones is "<<Max<<endl;
 
-// Individual* execute(Individual* indPtr, Mutator* mPtr, int k); 
 return 0;   
 }
 
