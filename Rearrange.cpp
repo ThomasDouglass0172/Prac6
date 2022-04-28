@@ -6,7 +6,7 @@ Individual* Rearrange::mutate(Individual* offspring, int k){
     int length = offspring->getLength(); 
     string result = offspring->getString(); 
     k=k%length; 
-    if (k==-1){
+    if (k==0){
         k=length; 
     }
 string cut = result.substr (k-1); 
