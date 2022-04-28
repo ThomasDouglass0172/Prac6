@@ -6,7 +6,10 @@
 
 using namespace std; 
 
-BitFlipProb::BitFlipProb(int p){  //p is the probability that each of the bits will flip when the mutate function is called. 
+BitFlipProb::BitFlipProb(double p){  //p is the probability that each of the bits will flip when the mutate function is called. 
+if (p<0 || p>1){
+    p=0;
+}
 this->p=p; 
 }
 

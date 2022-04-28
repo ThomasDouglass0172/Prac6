@@ -15,10 +15,9 @@ class Individual{
     int getMaxOnes();
     int getLength(); 
     ~Individual();
-    std::string binaryString;
+    
     private:
-    int lengthDNA; 
-    int pos;  
+    std::string binaryString;
     
 
 

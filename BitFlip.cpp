@@ -1,5 +1,4 @@
 #include "BitFlip.h"
-#include "Individual.h"
 
 using namespace std; 
 
@@ -19,6 +18,5 @@ while (lengthTest==0){
 }
 
 offspring->flipBit(k); 
-//if this flips the wrong bit change k to 'k-1' and put the equals on the other if statement
 return offspring; 
 }

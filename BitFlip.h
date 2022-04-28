@@ -5,6 +5,6 @@
 class BitFlip: public Mutator{
 
 public: 
-Individual* mutate(Individual*, int k); 
+Individual* mutate(Individual* offspring, int k); 
 };
 #endif 

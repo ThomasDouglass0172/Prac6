@@ -17,14 +17,12 @@ using namespace std;
 
 
     Individual::Individual(string InputBinaryString){
-    //this->binaryString=binaryString.assign(InputBinaryString.begin(),InputBinaryString.end());  //sets the binary string to the input. (copied so it should have different address)
     this->binaryString=InputBinaryString; 
     }
 
 
     string Individual::getString(){ //The function outputs a binary string representation of the bitstring list (e.g.“01010100”)
-
-        return binaryString; 
+    return binaryString; 
     }
 
 
