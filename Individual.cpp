@@ -29,20 +29,20 @@ using namespace std;
 
     int Individual::getBit(int pos){ //The function returns the bit value at position pos. It should return -1 if pos is out of bound..
     
-    if ( pos<0 || binaryString.length()<pos){
+    if ( pos<0 || getLength()>=pos){
         return -1; 
     }
-    return binaryString[pos]; 
+    return binaryString[pos]-48; 
     }
 
 
     void Individual::flipBit(int pos){ // The function takes in the position of the certain bit and flip the bit value.
     if (binaryString[pos]==1){
-        binaryString[pos]=0; 
+        binaryString[pos]=48; 
         return; 
     }
     if (binaryString[pos]==0){
-      binaryString[pos]=1; 
+      binaryString[pos]=49; 
     return;  
     }
     cout<<"failed flipBit"<<endl;
@@ -55,12 +55,12 @@ using namespace std;
     int binary= stoi(binaryString); 
     int MaxSequence=0; 
     int sequence=0; 
-    for (int i=0; i<=binaryString.length(); i++){
-        int binary_at_pos= int(binary/pow(10, binaryString.length()-i)) %10;
+    for (int i=0; i<=getLength(); i++){
+        int binary_at_pos= int(binary/pow(10, getLength()-i)) %10;
         if (binary_at_pos==1){
             sequence++; 
         }
-        if (binary_at_pos==0 || i==(binaryString.length())){
+        if (binary_at_pos==0 || i==(getLength())){
            if (MaxSequence<sequence){
                MaxSequence=sequence;
             }
