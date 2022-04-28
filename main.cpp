@@ -20,20 +20,15 @@ int main(){
     
     
     //takes in one line of input: binarystr1 k1 binarystr2 k2
-
+    
     string binarystr1;
     string binarystr2; 
     int k1; 
     int k2; 
 
-    cout<<"enter string of numbers: "<<endl;
     cin>> binarystr1;
-    cout<<"enter another string of numbers: "<<endl;
+    cin>>k1;
     cin>>binarystr2; 
-
-    cout<<"enter a number: "<<endl; 
-    cin>>k1; 
-    cout<<"enter another number: "<<endl;
     cin>>k2; 
 
 Individual Ind1(binarystr1);
