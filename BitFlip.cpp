@@ -1,10 +1,12 @@
 #include "BitFlip.h"
+#include "Individual.h"
 
 using namespace std; 
 
 Individual BitFlip::Mutate(Individual, int k){
+Individual offspring; 
 
-int length = Individial.getLength(); 
+int length = offspring.getLength(); 
 int lengthTest=0; 
 while (lengthTest==0){
     if (k>=length){
@@ -15,7 +17,7 @@ while (lengthTest==0){
     }
 }
 
-Individual.flipbit(k); 
+offspring.flipBit(k); 
 //if this flips the wrong bit change k to 'k-1' and put the equals on the other if statement
-return Individual; 
+return offspring; 
 }

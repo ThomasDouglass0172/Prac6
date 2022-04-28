@@ -4,9 +4,9 @@
 #include <string> 
 
 
-class Mutator: public Individial{
+class Mutator: public Individual{
 
     public:
-    virtual Individual mutate(Individual, int k);  
+    virtual Individual mutate(Individual, int k)=0;  
 };
 #endif

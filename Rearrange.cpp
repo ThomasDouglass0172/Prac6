@@ -1,14 +1,15 @@
 #include "Rearrange.h"
+#include "Individual.h"
 
 using namespace std; 
 
 Individual Rearrange::Mutate(Individual, int k){
-
-int length = Individial.getLength(); 
-individual->binaryString.insert(0,binaryString,k,(getLength-k))
-for (int i=0; i<(getLength-k);i++){
-    individual->binaryString.popback(); 
+Individual offspring; 
+int length = offspring.getLength(); 
+offspring.binaryString.insert(0,binaryString,k,(length-k));
+for (int i=0; i<(length-k); i++){
+    offspring.binaryString.pop_back(); 
 }
 
-return Individual; 
+return offspring; 
 }

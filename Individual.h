@@ -3,7 +3,7 @@
 #include <string> 
 
 
-class Individial{
+class Individual{
 
     public:
     Individual(); 
@@ -15,12 +15,11 @@ class Individial{
     int getMaxOnes();
     int getLength(); 
     ~Individual();
-
+    std::string binaryString;
     private:
     int lengthDNA; 
-    int pos; 
-
-    std::string binaryString;
+    int pos;  
+    
 
 
 

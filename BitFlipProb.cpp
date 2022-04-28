@@ -2,16 +2,17 @@
 #include <cstdlib>
 #include <ctime>
 #include <iostream>
+#include "Individual.h"
 
 using namespace std; 
 
-BitFlipProb(int p){  //p is the probability that each of the bits will flip when the mutate function is called. 
+BitFlipProb::BitFlipProb(int p){  //p is the probability that each of the bits will flip when the mutate function is called. 
 this->p=p; 
 }
 
 Individual BitFlipProb::Mutate(Individual, int k){
-
-int length = Individual.getLength(); 
+Individual offspring; 
+int length = offspring.getLength(); 
 double randomNumber;
 for (int i=0; i<length; i++){
 
@@ -19,9 +20,9 @@ for (int i=0; i<length; i++){
     randomNumber = ((rand() % 10) + 1)/10;
 
     if (randomNumber>=p){
-        Individual.FlipBit(i); 
+        offspring.flipBit(i); 
     }
 }
 
-return Individual; 
+return offspring; 
 }

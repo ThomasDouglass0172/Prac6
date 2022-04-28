@@ -2,27 +2,34 @@
 #include <bitset>
 #include <iostream> 
 #include <string>
+#include <cmath>
 using namespace std; 
 
 
 
     Individual::Individual(){
-        this->binaryString=0;
     }
+
     Individual::Individual(int lengthDNA){
-        this->binaryString=bitset<lengthDNA>(0).to_string();
+        string binStr (lengthDNA, 0);
+        this->binaryString= binStr;  
     }
+
+
     Individual::Individual(string InputBinaryString){
     //this->binaryString=binaryString.assign(InputBinaryString.begin(),InputBinaryString.end());  //sets the binary string to the input. (copied so it should have different address)
     this->binaryString=InputBinaryString; 
     }
 
+
     string Individual::getString(){ //The function outputs a binary string representation of the bitstring list (e.g.“01010100”)
         return binaryString; 
     }
 
+
     int Individual::getBit(int pos){ //The function returns the bit value at position pos. It should return -1 if pos is out of bound..
-    if ( pos<0 || (binary.length()-1)<pos){
+    
+    if ( pos<0 || binaryString.length()<pos){
         return -1; 
     }
     return binaryString[pos]; 
@@ -41,6 +48,7 @@ using namespace std;
     cout<<"failed flipBit"<<endl;
     return; 
     } 
+
 
     int Individual::getMaxOnes(){ //The function returns the longest consecutive sequence of ‘1’ digits in the list
     // (e.g. calling the function on “1001110” will obtain 3).
@@ -67,3 +75,6 @@ using namespace std;
         lengthDNA=binaryString.length();
         return lengthDNA; 
     } 
+    Individual::~Individual(){
+    
+    }
