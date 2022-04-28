@@ -46,8 +46,6 @@ using namespace std;
       binaryString[pos]='1'; 
     return;  
     }
-    cout<<binaryString[pos]<<endl;
-    cout<<"failed flipBit"<<endl;
     return; 
     } 
 
