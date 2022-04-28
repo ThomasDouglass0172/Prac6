@@ -70,7 +70,7 @@ using namespace std;
 
 
     int Individual::getLength(){ //The function returns the length of the list.
-        lengthDNA=binaryString.length();
+        int lengthDNA=binaryString.length();
         return lengthDNA; 
     } 
     Individual::~Individual(){

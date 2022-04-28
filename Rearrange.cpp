@@ -4,19 +4,18 @@ using namespace std;
 
 Individual* Rearrange::mutate(Individual* offspring, int k){
     int length = offspring->getLength(); 
+    string result = offspring->getString(); 
     k=k%length; 
-    if (k=-1){
+    if (k==-1){
         k=length; 
     }
-string cut = offspring->binaryString.substr (k-1); 
+string cut = result.substr (k-1); 
 for (int i=0; i<length-(k-1); i++){
-offspring->binaryString.pop_back();
+result.pop_back();
 }
 
-string print = offspring->getString();
-
-offspring->binaryString=cut+(offspring->binaryString); 
-
+result = cut+result; 
+offspring=new Individual(result); 
 
 
 return offspring; 
