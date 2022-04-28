@@ -51,16 +51,8 @@ p1=execute(p1, m1, k1 );
 
 p2= execute(p2, m2, k2 );
 
-int sequenceMax1 = p1->getMaxOnes(); 
-
 int sequenceMax2 = p2->getMaxOnes(); 
-int Maxsequence; 
-if (sequenceMax1>=sequenceMax2){
-    Maxsequence=sequenceMax1; 
-}
-if(sequenceMax2>sequenceMax1){
-    Maxsequence=sequenceMax2; 
-}
+
 
 
 
@@ -68,7 +60,7 @@ if(sequenceMax2>sequenceMax1){
 string BinStr1 = p1->getString(); 
 string BinStr2 = p2->getString(); 
 
-cout<<BinStr1<<" "<<BinStr2<<" "<<Maxsequence<<endl;
+cout<<BinStr1<<" "<<BinStr2<<" "<<sequenceMax2<<endl;
 
 // int length= Ind1.getLength(); 
 // string str = Ind1. getString(); 
