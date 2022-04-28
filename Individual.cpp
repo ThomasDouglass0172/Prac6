@@ -38,14 +38,15 @@ using namespace std;
 
 
     void Individual::flipBit(int pos){ // The function takes in the position of the certain bit and flip the bit value.
-    if (binaryString[pos]==1){
-        binaryString[pos]=48; 
+    if (binaryString[pos]=='1'){
+        binaryString[pos]='0'; 
         return; 
     }
-    if (binaryString[pos]==0){
-      binaryString[pos]=49; 
+    if (binaryString[pos]=='0'){
+      binaryString[pos]='1'; 
     return;  
     }
+    cout<<binaryString[pos]<<endl;
     cout<<"failed flipBit"<<endl;
     return; 
     } 
