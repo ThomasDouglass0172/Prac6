@@ -23,13 +23,14 @@ using namespace std;
 
 
     string Individual::getString(){ //The function outputs a binary string representation of the bitstring list (e.g.“01010100”)
+
         return binaryString; 
     }
 
 
     int Individual::getBit(int pos){ //The function returns the bit value at position pos. It should return -1 if pos is out of bound..
     
-    if ( pos<0 || getLength()>=pos){
+    if ( pos<0 || getLength()<=pos){
         return -1; 
     }
     return binaryString[pos]-48; 

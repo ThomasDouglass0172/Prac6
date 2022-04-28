@@ -10,9 +10,8 @@ BitFlipProb::BitFlipProb(int p){  //p is the probability that each of the bits w
 this->p=p; 
 }
 
-Individual BitFlipProb::Mutate(Individual, int k){
-Individual offspring; 
-int length = offspring.getLength(); 
+Individual* BitFlipProb::mutate(Individual* offspring, int k){ 
+int length = offspring->getLength(); 
 double randomNumber;
 for (int i=0; i<length; i++){
 
@@ -20,7 +19,7 @@ for (int i=0; i<length; i++){
     randomNumber = ((rand() % 10) + 1)/10;
 
     if (randomNumber>=p){
-        offspring.flipBit(i); 
+        offspring->flipBit(i); 
     }
 }
 

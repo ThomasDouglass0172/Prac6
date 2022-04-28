@@ -3,10 +3,10 @@
 
 using namespace std; 
 
-Individual BitFlip::Mutate(Individual, int k){
-Individual offspring; 
+Individual* BitFlip::mutate(Individual* offspring, int k){
 
-int length = offspring.getLength(); 
+
+int length = offspring->getLength(); 
 int lengthTest=0; 
 while (lengthTest==0){
     if (k>=length){
@@ -17,7 +17,7 @@ while (lengthTest==0){
     }
 }
 
-offspring.flipBit(k); 
+offspring->flipBit(k); 
 //if this flips the wrong bit change k to 'k-1' and put the equals on the other if statement
 return offspring; 
 }

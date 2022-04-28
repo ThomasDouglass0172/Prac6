@@ -6,7 +6,7 @@ class BitFlipProb: public Mutator{
 
 public: 
 BitFlipProb(int p); 
-Individual Mutate(Individual, int k); 
+Individual* mutate(Individual*, int k); 
 private: 
 double p; 
 };

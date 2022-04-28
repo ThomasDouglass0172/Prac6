@@ -7,6 +7,6 @@
 class Mutator: public Individual{
 
     public:
-    virtual Individual mutate(Individual, int k)=0;  
+    virtual Individual* mutate(Individual*, int k)=0;  
 };
 #endif
